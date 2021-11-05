@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            border: orangered solid 2px;
+        }
+
+        th, td {
+            border-collapse: collapse;
+            border: orangered solid 1px;
+            padding: 5px;
+        }
+
+        input {
+            border: #3d3e42;
+            border-radius: 5px;
+            padding: 3px;
+        }
+
+        button {
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <Tr>
+        <th>Số Tiền</th>
+        <th>Từ Mệnh Giá</th>
+        <th> Sang Mệnh Giá</th>
+    </Tr>
+    <tr>
+        <Td><input type="text" id="abc"></Td>
+        <td><select id="select1">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+            <option value="Yuan">Yuan</option>
+        </select></td>
+        <td>
+            <select id="select2">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="Yuan">Yuan</option>
+            </select>
+        </td>
+    </tr>
+
+    <Tr>
+        <td colspan=" 3 ">
+            <button type="button" onclick="doiTien()">Chuyển</button>
+        </td>
+    </Tr>
+    <tr>
+        <Td colspan="3">
+            <p id="ketQua">Nhìn ở đêy</p>
+        </td>
+    </tr>
+</table>
+<script>
+
+    function doiTien() {
+        let luaChon1 = document.getElementById("select1").value;
+        let luaChon2 = document.getElementById("select2").value;
+        let input =document.getElementById("abc").value;
+        if (luaChon1 == luaChon2) {
+            document.getElementById("ketQua").innerHTML=input
+        }
+        if (luaChon1 == "VND" && luaChon2 == "USD") {
+            document.getElementById("ketQua").innerHTML=input / 24000
+        }
+        if (luaChon1 == "USD" && luaChon2 == "VND") {
+            document.getElementById("ketQua").innerHTML=input * 24000
+        }
+
+    }
+</script>
+
+</body>
+</html>
+

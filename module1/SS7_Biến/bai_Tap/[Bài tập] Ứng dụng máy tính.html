@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Máy Đếm</h1>
+<input type="text" id="soDau">
+<input type="text" id="soHai">
+<br>
+<Br>
+<button type="button" onclick="tongSo()">Phép Cộng ( + )</button>
+<button type="button" onclick="hieuSo()">Phép Trừ ( - )</button>
+<button type="button" onclick="tichSo()">Phép Nhân ( * )</button>
+<button type="button" onclick="thuongSo()">Phép Chia ( / )</button>
+<Br>
+<Br>
+<p id="ketQua">kết quả ở đêy nèk</p>
+<script>
+    function tongSo() {
+        let a = document.getElementById('soDau').value;
+        let b = document.getElementById('soHai').value;
+        document.getElementById('ketQua').innerText = 'kết quả là : ' + a + b;
+    }
+
+    function hieuSo() {
+        let c = parseInt(document.getElementById('soDau').value);
+        let d = parseInt(document.getElementById('soHai').value);
+        document.getElementById('ketQua').innerText = 'kết quả là : ' + c - d;
+    }
+
+    function tichSo() {
+        let e = parseInt(document.getElementById('soDau').value)
+        let f = parseInt(document.getElementById('soHai').value);
+        document.getElementById('ketQua').innerText = 'kết quả là : ' + e * f;
+    }
+    function thuongSo() {
+        let q = parseInt(document.getElementById('soDau').value)
+        let s = parseInt(document.getElementById('soHai').value);
+        document.getElementById('ketQua').innerText = 'kết quả là : ' +  q / s ;
+    }
+</script>
+</body>
+</html>

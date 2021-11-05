@@ -1,0 +1,67 @@
+.cnhat {
+    padding: 10px;
+    font-size: 30px;
+    background: red;
+    color: white;
+    width: 100px;
+    height: 40px;
+}
+.thuhai{
+    padding: 10px;
+    font-size: 30px;
+    background: orange;
+    color: white;
+    width: 100px;
+    height: 40px;
+}
+.thubay{
+    padding: 10px;
+    font-size: 30px;
+    background: blue;
+    color: white;
+    width: 100px;
+    height: 40px;
+}
+.sun{
+    padding: 10px;
+    font-size: 25px;
+    color: red;
+    width: 100px;
+    height: 40px;
+}
+.mon{
+    padding: 10px;
+    font-size: 25px;
+    color: black;
+    width: 100px;
+    height: 40px;
+}
+.sat{
+    padding: 10px;
+    font-size: 25px;
+    color: blue;
+    width: 100px;
+    height: 40px;
+}
+
+.lich1 {
+    font-size: 35px;
+    text-align: center;
+    width: 100px;
+    border: solid gray 3px;
+    height: 50px;
+    border-spacing: 0px;
+}
+.lich2 {
+    font-size: 35px;
+    text-align: center;
+    width: 100px;
+    color: blue;
+    border: solid gray 3px;
+    height: 50px;
+    border-spacing: 0px;
+}
+
+.table {
+    border-collapse: collapse;
+}
