@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2 </title>
+</head>
+<body>
+    <p>Tuổi đủ để học sinh vào lớp 10 là trên 16 tủi</p>
+<input type="text" id="soTuoi">
+<button type="button" onclick="xemTuoi()"> Xem nào </button>
+<p id="oDay" >cết wả ở đây </p>
+</body>
+<script>
+
+    function xemTuoi() {
+        let a = document.getElementById("soTuoi").value
+        if (a < 16) {
+            document.write(document.getElementById("oDay")) === "Đủ Tuổi học rùi" ;
+        }
+    }
+
+</script>
+</html>

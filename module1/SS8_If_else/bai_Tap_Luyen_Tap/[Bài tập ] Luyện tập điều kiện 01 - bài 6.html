@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script !src="">
+    let doanhSo = parseInt(prompt('Mời bạn nhập DOANH SỐ đã bán được hàng '));
+    if (doanhSo <= 100) {
+        hoaHong = doanhSo * 5 / 100;
+        document.write("Doanh Số Bạn đã bán được hàng là :" + doanhSo);
+        document.write('<br/>');
+        document.write("Hoa Hồng Bạn Nhận được là : " + hoaHong);
+    } else if (doanhSo <= 300) {
+        hoaHong = doanhSo * 10 / 100;
+        document.write("Doanh Số Bạn đã bán được hàng là :" + doanhSo);
+        document.write('<br/>');
+        document.write("Hoa Hồng Bạn Nhận được là : " + hoaHong);
+    } else if (doanhSo > 300) {
+        hoaHong = doanhSo * 20 / 100;
+        document.write("Doanh Số Bạn đã bán được hàng là :" + doanhSo);
+        document.write('<br/>');
+        document.write("Hoa Hồng Bạn Nhận được là : " + hoaHong);
+    }
+</script>
+
+</body>
+</html>
