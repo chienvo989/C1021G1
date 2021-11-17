@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        function isPrime(number) {
+            if (number >= 2 ){
+                for (let i = 2 ; i < number ; i++){
+                    if (number % i === 0 ){
+                        return false;
+                    }
+                }
+                return  true ;
+            } else {
+                return false;
+            }
+        }
+    let num = parseInt(prompt("mời nhập số lượng"));
+    let count = 0 ;
+    let n = 1 ;
+    let result = "";
+    while (count < num){
+        if (isPrime(n)){
+            result += n +" , ";
+            count++ ;
+        }
+        n++;
+    }
+    document.write("Dãy số nguyên tố là : " + result);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ đỉn</title>
+</head>
+<body>
+<input type="text" id="eng" placeholder="English"  >
+<input type="button" value="Search" id="search" placeholder="Vietnamese" onclick="search()">
+<p id="text"></p>
+</body>
+
+<script>
+
+
+
+    function tudien(tudien) {
+        let anh = ["japan", "china", "korea", "taiwan", "vietnam", "india"];
+        let viet = ["Nhật Bản", "Trung Quốc", "Hàn Quốc", "Đài Loan", "Việt Nam", "Ấn Độ"];
+        for (let i  = 0 ; i < anh.length ; i++){
+            if (tudien === anh[i]){
+                return viet[i];
+            }
+
+        }
+    }
+    function search(){
+        let search1 = document.getElementById("eng").value ;
+        let tim = tudien(search1);
+        document.getElementById("text").innerHTML = search1 + " : Dịch sang tiếng việt  : " + tim;
+    }
+
+</script>
+
+</html>
