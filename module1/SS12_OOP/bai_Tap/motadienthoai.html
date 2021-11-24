@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DienThoai { // đặt tên class theo qt PascalCase ( Ghi hoa Ký tự Đầu tiên của mỗi từ)
+
+        constructor() {
+            this.pin = 100;
+            this.vungNhoSoanThao = "";
+            this.vungNhoTinDen = [];
+            this.vungNhoTinGui = [];
+            this.trangThai = true;// mặc đinh khi khởi tạo là mở.
+        }
+
+        getTrangThai() {
+            if (this.trangThai) {
+                console.log("điện thoại đang bật");
+            } else {
+                console.log("điện thoại đang tắt")
+            }
+        }
+
+        batTat() {
+            this.trangThai = !this.trangThai;
+        }
+
+        soanTin(text) {
+            this.vungNhoSoanThao = text;
+        }
+
+        sacPin() {
+            this.pin = 100;
+        }
+
+        nhanTinNhan(message) {
+            this.vungNhoTinDen.push(message);
+        }
+
+        guiTinNhan(dienThoai, message) {
+            this.soanTin(message);
+            this.vungNhoTinGui.push(this.vungNhoSoanThao);
+            dienThoai.nhanTinNhan(message);
+            this.vungNhoSoanThao = "";
+        }
+
+        hienThiTinDen() {
+            for (let i = 0; i < this.vungNhoTinDen.length; i++) {
+                console.log((1 + i) + "." + this.vungNhoTinDen[i])
+            }
+        }
+        getTinNhanDaNhan() {// viết thêm để sử dụng hiện thị trong html
+            let result=""
+            for (let i = 0; i < this.vungNhoTinDen.length; i++) {
+                result+=(1+i)+"."+ this.vungNhoTinDen[i];
+            }
+            return result;
+        }
+        hienThiTinGui() {
+            for (let i = 0; i < this.vungNhoTinGui.length; i++) {
+                console.log((1 + i) + "." + this.vungNhoTinGui[i])
+            }
+        }
+
+    }
+
+    // viết chuonwng trình chạy cách 1: không sử dungj html
+    // Khởi tạo 2  đối tượng dt nokia và iphone
+    // 2 điện thoại gửi tin nhắn cho nhau.
+
+    let nokia = new DienThoai();
+    let iphone = new DienThoai();
+    nokia.guiTinNhan(iphone,"Xin chao iphone");
+    iphone.hienThiTinDen();
+    iphone.guiTinNhan(nokia,"Chào bạn nokia. Bạn đang ở đâu đó");
+    nokia.hienThiTinDen();
+    nokia.guiTinNhan(iphone,"Mình đang ở Vn")
+    iphone.hienThiTinDen()
+
+</script>
+</body>
+</html>

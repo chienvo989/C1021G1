@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    class myHinhChuNhat{
+        constructor(dai,rang) {
+            this.dai = dai ;
+            this.rang = rang ;
+        }
+        getDai(){
+            return this.dai;
+        }
+        getRong(){
+            return this.rang;
+        }
+        setDai(dai){
+            this.dai = dai;
+        }
+        setRong(rang){
+            this.rang = rang ;
+        }
+
+
+        getDienTich(dai ,rang){
+            return "Diện tích của hình chữ nhật ="+dai*rang;
+        }
+        getChuVi(dai ,rang){
+            return "Chu Vi của hình chữ nhật ="+ (dai+rang)/2;
+        }
+
+    }
+    let hcn = new myHinhChuNhat(50,20);
+    let dai = hcn.getDai();
+    let rang = hcn.getRong();
+    let S = hcn.getDienTich(dai,rang);
+    let C = hcn.getChuVi(dai,rang);
+    alert(S);
+    alert(C);
+
+
+
+
+
+    let hcn1 = new myHinhChuNhat();
+    hcn1.setDai(20);
+    hcn1.setRong(15);
+    dai = hcn1.getDai();
+    rang = hcn1.getRong();
+    S = hcn1.getDienTich(dai,rang);
+    C = hcn1.getChuVi(dai,rang);
+    alert(S);
+    alert(C);
+
+
+
+
+
+</script>
+</body>
+</html>

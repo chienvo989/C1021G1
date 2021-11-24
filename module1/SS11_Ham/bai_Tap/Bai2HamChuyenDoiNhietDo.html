@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="nhapso">
+<select id="selectFeetMeters">
+    <option value="feet">Feet</option>
+    <option value="meters">Meters</option>
+</select>
+<input type="button" value="Kiểm tra" onclick="chuyendoi()">
+
+<p id="ketQua"></p>
+
+</body>
 <script !src="">
     function footToMeter(foot) {
         let meter = 0.305 * foot;
@@ -28,5 +38,4 @@
     }
 
 </script>
-</body>
 </html>

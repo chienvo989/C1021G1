@@ -8,9 +8,22 @@
 <body>
 
 <script>
+    let a = [ 1, 4, 2, 6, 5, ];
+    document.write(solution(a))
+    function solution(arr) {
+        let flag = false
+        let dinhNui = 0;
+        for (let i = 0; i < arr.length; i++) {
+            flag = i !== 0 && i !== arr.length - 1;
+            if (flag) {
+                if (  arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+                    dinhNui++;
+                }
+            }
+        }
+        return dinhNui;
+    }
 
-   let a = [2, 2, 3, 4, 5];
-   console.log(a.join())
 </script>
 
 </body>
