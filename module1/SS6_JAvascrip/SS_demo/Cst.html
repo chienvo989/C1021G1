@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let d = parseInt(prompt("nhập chiều dài "));
+    let r = parseInt(prompt("nhập chiều rộng"));
+    for (i = 1 ; i <= d ; i++  ) {
+            if ( i === 1 || i === d  ) {
+                document.write("*".repeat(r));
+                document.write("<br>");
+            } else {
+                document.write("*");
+                document.write("&nbsp".repeat(r*2 - 4));
+                document.write("*");
+                document.write("<Br>");
+
+            }
+    }
+
+</script>
+</body>
+</html>

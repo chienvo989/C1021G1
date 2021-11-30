@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let arr = [];
+    let sum = 0;
+    let count = 0;
+    let enter = parseInt(prompt("Vui lòng nhập độ dài của mảng"));
+    if (enter > 50){
+        alert(" Bạn đã nhập quá 50 phần tử . Vui lòng nhập lại");
+    } else {
+        for (let i = 0 ; i < enter ; i++){
+            arr[i] = parseInt(prompt("Vui lòng nhập phần tử"));
+            if (arr[i] % 3 === 0 ){
+                sum = sum + arr[i] ;
+                count++;
+            }
+        }
+
+    }
+    let avg = sum / count ;
+    document.write("Mảng gồm các phần tử :" + arr + "</br>");
+    document.write("Trung bình cộng của các phần tử trong mảng chia hết cho 3 là :" + avg);
+</script>
+
+</body>
+</html>

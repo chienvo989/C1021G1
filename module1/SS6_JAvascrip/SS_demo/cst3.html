@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Câu 1: Cho một mảng số nguyên có số phần tử không vượt quá 50 phần tử,
+    // viết chương trình hiển thị trung bình cộng các số có trong mảng chia hết cho 3.
+
+    // let arr = [];
+    // let sum = 0;
+    // let enter = parseInt(prompt("Vui lòng nhập độ dài của mảng"));
+    // if (enter > 50){
+    //     alert(" Bạn đã nhập quá 50 phần tử . Vui lòng nhập lại");
+    // } else {
+    //     for (let i = 0 ; i < enter ; i++){
+    //         arr[i] = parseInt(prompt("Vui lòng nhập phần tử"));
+    //         if (arr[i] % 3 === 0 ){
+    //             sum = sum + arr[i] ;
+    //         }
+    //     }
+    //
+    // }
+    // let avg = sum / enter ;
+    // document.write("Mảng gồm các phần tử :" + arr + "</br>");
+    // document.write("Trung bình cộng của các phần tử trong mảng chia hết cho 3 là :" + avg);
+
+
+    // Câu 2: Viết hàm cho phép nhập vào một số nguyên dương,
+    //          kiểm tra xem số vừa nhập đó có phải là số hoàn hảo hay không.
+    //       Chương trình sẽ trả về true nếu số đó là số hoàn hảo và false nếu không phải là số hoàn hảo.
+
+    // function perfectNum(a) {
+    //     let sumA = 0 ;
+    //     for ( let i = 0 ; i < a ; i++){
+    //         if ( a % i === 0){
+    //             sumA = sumA + i ;
+    //         }
+    //     }
+    //     if (sumA === a){
+    //         return true;
+    //     }else {
+    //         return false;
+    //     }
+    // }
+    // let testNum = parseInt(prompt("Vui lòng nhập vào số cần kiểm tra"));
+    // alert(perfectNum(testNum));
+
+
+    // Câu 3: Viết chương trình cho phép nhập tháng, năm. Tính xem tháng/ năm đó có bao nhiêu ngày
+    // Yêu cầu kiểm tra định dạng của tháng năm nhập vào MM/yyyy
+    // *Yêu cầu nâng cao: Đối với tháng 2 cần kiểm tra xem có phải là năm nhuận hay không.
+    //     Nếu năm Nhuận thì tháng 2 sẽ có 29 ngày, ngược lại thì là 28 ngày
+
+
+    function checkMonth(str) {
+        let month = parseInt(str.slice(0,2));
+        let year = parseInt(str.slice(3,str.length));
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return 30;
+                break;
+            case 2:
+                if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))
+                    return 29;
+                else
+                    return 28;
+                break;
+        }
+    }
+    let str = prompt("Nhập tháng, năm:");
+    if (str[2] !== "/")
+        alert("Nhập sai định dạng!");
+    else
+        alert(checkMonth(str));
+</script>
+</body>
+</html>

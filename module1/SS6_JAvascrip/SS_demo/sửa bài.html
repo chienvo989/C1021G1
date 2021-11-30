@@ -5,13 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+
+
+
+
+
 <script>
-    let a = 3
-    a--;
-    alert(a);
-    a += 4
-    alert(a);
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return (a+1) * func1(a - 1);
+    }
 </script>
+
 
 </body>
 </html>
