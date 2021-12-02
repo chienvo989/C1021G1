@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let A = [];
+    let sum = 0;
+    let count = 0;
+    let a = parseInt(prompt("nhập độ dài của Mảng"));
+    if (a > 50) {
+        alert("mảng quá dài , nhập lại :");
+    } else {
+        for (let i = 0; i < a; i++) {
+            A[i] = parseInt(prompt("Nhập phần tử trong Mảng"));
+            if (A[i] % 3 === 0) {
+                sum = sum + A[i];
+                count++;
+            }
+        }
+    }
+    let tbC = sum / count;
+    alert("Mảng gồm các phần tử :" + A );
+    alert("Trung bình cộng của các phần tử trong mảng chia hết cho 3 là :" + tbC);
+</script>
 </body>
 </html>
+

@@ -3,29 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
 </head>
 <body>
-
+<input type="text" id="inputmonth" placeholder="Nhập tháng">
+<input type="text" id="inputyear" placeholder="Nhập năm">
+<input type="button" onclick="convertday()" value="Tính số ngày">
+<span id="result">
 <script>
-    let a = [ 1, 4, 2, 6, 5, ];
-    document.write(solution(a))
-    function solution(arr) {
-        let flag = false
-        let dinhNui = 0;
-        for (let i = 0; i < arr.length; i++) {
-            flag = i !== 0 && i !== arr.length - 1;
-            if (flag) {
-                if (  arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
-                    dinhNui++;
+    function convertday() {
+        let month = parseInt(document.getElementById("inputmonth").value);
+        let year = parseInt(document.getElementById("inputyear").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").innerHTML = "Tháng " + month + " có 31 ngày.";
+                break;
+            case 2:
+                if (year % 4 === 0 && year % 100 !== 0) {
+                    document.getElementById("result").innerHTML = "Tháng " + month + " năm  " + year + " là tháng có 29 ngày";
+                } else if (year % 100 === 0 && year % 400 === 0) {
+                    document.getElementById("result").innerHTML = "Tháng " + month + " năm  " + year + " là tháng có 29 ngày";
+                } else {
+                    document.getElementById("result").innerHTML = "Tháng " + month + " năm " + year + " là tháng có 28 ngày";
                 }
-            }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("result").innerHTML = "Tháng " + month + " có 30 ngày.";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Một năm chỉ có 12 tháng, bạn vui lòng nhập lại";
         }
-        return dinhNui;
+
     }
 
-</script>
 
+</script>
+</span>
 </body>
 </html>
-

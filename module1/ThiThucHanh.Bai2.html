@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let A = parseInt(prompt("Vui lòng nhập vào số cần kiểm tra"));
+    function soHH(A) {
+        let sum = 0 ;
+        for ( let i = 1 ; i < A ; i++){
+            if ( A % i === 0){
+                sum = sum + i ;
+            }
+        }
+        if (sum === A){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
+    alert(soHH(A));
+
+</script>
 </body>
 </html>
